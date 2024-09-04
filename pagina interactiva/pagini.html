@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactividad con IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Seccion de arrastre -->
+    <div id="drag-section" class="section">
+        <h1>¿Qué es la Inteligencia Artificial?</h1>
+        <div class="block-container">
+            <div class="block" id="data" draggable="true">Datos</div>
+            <div class="block" id="algorithms" draggable="true">Algoritmos</div>
+            <div class="block" id="models" draggable="true">Modelos</div>
+        </div>
+        <div class="drop-area">
+            Arrastra los bloques a esta área para crear una IA
+        </div>
+    </div>
+
+    <!--Seccion de quizzes-->
+    <div id="quiz1-section" class="section hidden">
+        <h2>Quiz de IA - Parte 1</h2>
+        <p>1. ¿Qué es una inteligencia artificial?</p>
+        <button onclick="checkAnswer(1, 'correct', 'quiz1-section', 'quiz2-section')">a) Una máquina capaz de aprender y adaptarse</button>
+        <button onclick="checkAnswer(1, 'wrong')">b) Un tipo de hardware</button>
+        <button onclick="checkAnswer(1, 'wrong')">c) Un programa que siempre sigue reglas predefinidas</button>
+        <div id="result1"></div>
+    </div>
+
+    
+    <div id="quiz2-section" class="section hidden">
+        <h2>Quiz de IA - Parte 2</h2>
+        <p>2. ¿Cuál es el objetivo principal del aprendizaje automático?</p>
+        <button onclick="checkAnswer(2, 'wrong')">a) Programar reglas explícitas</button>
+        <button onclick="checkAnswer(2, 'correct', 'quiz2-section', 'quiz3-section')">b) Mejorar el rendimiento de una tarea a través de la experiencia</button>
+        <button onclick="checkAnswer(2, 'wrong')">c) Reemplazar a los humanos en todos los trabajos</button>
+        <div id="result2"></div>
+    </div>
+
+    
+    <div id="quiz3-section" class="section hidden">
+        <h2>Quiz de IA - Parte 3</h2>
+        <p>3. ¿Qué es un modelo en el contexto de la IA?</p>
+        <button onclick="checkAnswer(3, 'correct')">a) Una representación matemática o computacional de un problema</button>
+        <button onclick="checkAnswer(3, 'wrong')">b) Una base de datos de grandes volúmenes</button>
+        <button onclick="checkAnswer(3, 'wrong')">c) Un conjunto de instrucciones para ensamblar un robot</button>
+        <div id="result3"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
